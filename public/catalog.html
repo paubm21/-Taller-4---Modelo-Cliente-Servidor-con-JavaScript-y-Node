@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Razas de Ganado — Catálogo</title>
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a class="navbar-brand" href="index.html">🐄 GanadoBovino</a>
+      <ul>
+        <li><a href="index.html">Gestión</a></li>
+        <li><a href="catalog.html" class="active">Catálogo</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <h1>Catálogo de Razas</h1>
+    <p>Explora las razas bovinas registradas en el sistema</p>
+  </div>
+
+  <div class="container">
+    <div class="catalog-filters">
+      <button class="filter-btn active" data-filter="Todos">Todas</button>
+      <button class="filter-btn" data-filter="Cárnica">🥩 Cárnicas</button>
+      <button class="filter-btn" data-filter="Lechera">🥛 Lecheras</button>
+      <button class="filter-btn" data-filter="Doble propósito">⚖️ Doble propósito</button>
+    </div>
+    <div id="catalogContainer" class="catalog-grid"></div>
+  </div>
+
+  <!-- Modal detalle -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" role="dialog" aria-modal="true">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <span class="modal-icon" id="modalIcon">🐄</span>
+          <div class="modal-title" id="modalName">—</div>
+          <div class="modal-subtitle" id="modalCategoria">—</div>
+        </div>
+        <button class="modal-close" id="modalClose" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="modal-body">
+        <p class="modal-description" id="modalDescription">—</p>
+        <div class="modal-grid">
+          <div class="modal-field">
+            <div class="modal-field-label">País de origen</div>
+            <div class="modal-field-value" id="modalOrigen">—</div>
+          </div>
+          <div class="modal-field">
+            <div class="modal-field-label">Temperamento</div>
+            <div class="modal-field-value" id="modalTemperamento">—</div>
+          </div>
+          <div class="modal-field">
+            <div class="modal-field-label">Peso promedio</div>
+            <div class="modal-field-value" id="modalPeso">—</div>
+          </div>
+          <div class="modal-field">
+            <div class="modal-field-label">Producción de leche</div>
+            <div class="modal-field-value" id="modalLeche">—</div>
+          </div>
+          <div class="modal-field">
+            <div class="modal-field-label">Fecha de registro</div>
+            <div class="modal-field-value" id="modalFecha">—</div>
+          </div>
+          <div class="modal-field">
+            <div class="modal-field-label">ID de raza</div>
+            <div class="modal-field-value" id="modalId">—</div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" id="modalCloseBtn">Cerrar ficha</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="./js/catalog.js"></script>
+</body>
+</html>

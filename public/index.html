@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Razas de Ganado — Gestión</title>
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a class="navbar-brand" href="index.html">🐄 GanadoBovino</a>
+      <ul>
+        <li><a href="index.html" class="active">Gestión</a></li>
+        <li><a href="catalog.html">Catálogo</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <h1>Gestión de Razas</h1>
+    <p>Administra el registro de razas bovinas</p>
+  </div>
+
+  <div class="container">
+
+    <div class="section-card">
+      <h2 id="formTitle">Registrar nueva raza</h2>
+      <form id="itemForm">
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="name">Nombre de la raza *</label>
+            <input type="text" id="name" placeholder="Ej: Angus" required>
+          </div>
+          <div class="form-group">
+            <label for="origen">País de origen *</label>
+            <input type="text" id="origen" placeholder="Ej: Escocia" required>
+          </div>
+          <div class="form-group">
+            <label for="categoria">Categoría *</label>
+            <select id="categoria" required>
+              <option value="">Seleccionar...</option>
+              <option value="Cárnica">Cárnica</option>
+              <option value="Lechera">Lechera</option>
+              <option value="Doble propósito">Doble propósito</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="peso_promedio_kg">Peso promedio (kg)</label>
+            <input type="number" id="peso_promedio_kg" placeholder="Ej: 700" min="0">
+          </div>
+          <div class="form-group">
+            <label for="produccion_leche_ldia">Producción leche (L/día)</label>
+            <input type="number" id="produccion_leche_ldia" placeholder="Ej: 25" min="0">
+          </div>
+          <div class="form-group">
+            <label for="temperamento">Temperamento</label>
+            <select id="temperamento">
+              <option value="">Seleccionar...</option>
+              <option value="Manso">Manso</option>
+              <option value="Dócil">Dócil</option>
+              <option value="Tranquilo">Tranquilo</option>
+              <option value="Nervioso">Nervioso</option>
+              <option value="Agresivo">Agresivo</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="fecha_registro">Fecha de registro</label>
+            <input type="date" id="fecha_registro">
+          </div>
+        </div>
+        <div class="form-group" style="margin-bottom:1.25rem">
+          <label for="description">Descripción</label>
+          <textarea id="description" placeholder="Características generales de la raza..."></textarea>
+        </div>
+        <div class="form-actions">
+          <button type="submit" id="submitBtn" class="btn btn-primary">Agregar raza</button>
+          <button type="button" id="cancelBtn" class="btn btn-secondary" style="display:none">Cancelar</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="section-card">
+      <h2>Razas registradas</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nombre</th>
+              <th>Origen</th>
+              <th>Categoría</th>
+              <th>Peso (kg)</th>
+              <th>Leche (L/día)</th>
+              <th>Temperamento</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="itemsTable"></tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>
