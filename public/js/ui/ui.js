@@ -1,9 +1,3 @@
-const CATEGORY_ICONS = {
-  "Cárnica": "🥩",
-  "Lechera": "🥛",
-  "Doble propósito": "⚖️"
-};
-
 const BADGE_CLASS = {
   "Cárnica": "badge badge-carnica",
   "Lechera": "badge badge-lechera",
