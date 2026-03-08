@@ -83,14 +83,25 @@ function createCard(item, idx) {
   card.querySelector(".btn-detail").addEventListener("click", () => openModal(item.id));
   return card;
 }
-
 async function openModal(id) {
   try {
     const res  = await fetch(`${API_URL}/${id}`);
     const item = await res.json();
 
     const icon = CATEGORY_ICONS[item.categoria] || "🐄";
-    document.getElementById("modalIcon").textContent        = icon;
+
+    // Cambiar el header: si tiene imagen mostrarla, si no el ícono
+    const modalHeader = document.querySelector(".modal-header");
+    if (item.imagen) {
+      modalHeader.style.background = `
+        linear-gradient(135deg, rgba(59,42,26,0.55) 0%, rgba(30,18,8,0.65) 100%),
+        url('${item.imagen}') center/cover no-repeat
+      `;
+    } else {
+      modalHeader.style.background = "linear-gradient(135deg, var(--col-leather), var(--col-earth))";
+    }
+
+    document.getElementById("modalIcon").textContent        = item.imagen ? "" : icon;
     document.getElementById("modalName").textContent        = item.name;
     document.getElementById("modalCategoria").textContent   = item.categoria || "—";
     document.getElementById("modalDescription").textContent = item.description || "Sin descripción.";

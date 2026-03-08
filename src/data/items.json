@@ -1,12 +1,12 @@
 [
   {
     "id": 1,
-    "name": "Angus",
+    "name": "Anguss",
     "description": "Raza originaria de Escocia, reconocida mundialmente por su excelente rendimiento cárnico y la alta calidad de su carne con marmoleo superior. Adaptable a climas fríos y moderados, es una de las razas más exportadas del mundo.",
     "origen": "Escocia",
     "categoria": "Cárnica",
     "peso_promedio_kg": 750,
-    "produccion_leche_ldia": 0,
+    "produccion_leche_ldia": 6,
     "temperamento": "Tranquilo",
     "fecha_registro": "2024-01-15",
     "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Angus_cattle_10.jpg/500px-Angus_cattle_10.jpg"
@@ -54,7 +54,7 @@
     "origen": "Inglaterra",
     "categoria": "Cárnica",
     "peso_promedio_kg": 720,
-    "produccion_leche_ldia": 0,
+    "produccion_leche_ldia": 5,
     "temperamento": "Manso",
     "fecha_registro": "2024-03-01",
     "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Hereford_bull_large.jpg/330px-Hereford_bull_large.jpg"
@@ -78,7 +78,7 @@
     "origen": "Francia",
     "categoria": "Cárnica",
     "peso_promedio_kg": 850,
-    "produccion_leche_ldia": 0,
+    "produccion_leche_ldia": 2,
     "temperamento": "Nervioso",
     "fecha_registro": "2024-03-20",
     "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Limousin_bull.jpg/500px-Limousin_bull.jpg"
@@ -126,7 +126,7 @@
     "origen": "Francia",
     "categoria": "Cárnica",
     "peso_promedio_kg": 1000,
-    "produccion_leche_ldia": 0,
+    "produccion_leche_ldia": 15,
     "temperamento": "Tranquilo",
     "fecha_registro": "2024-05-01",
     "imagen": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Taureau_charolais.jpg"
